@@ -1,0 +1,193 @@
+/* Make the body and main container wider */
+body {
+  body, html {
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+  }
+  
+  .body-main {
+    max-width: 1200px;
+  }
+  
+  .full-width {
+    width: 100%;
+    /* Full width of the screen */
+    height: 200px;
+    /* Example height */
+    background-color: lightblue;
+  }
+}
+
+.container-fluid, .container {
+  max-width: 100%;
+  /* allow container to take full screen */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* If there's a sidebar, reduce its size to give table more space */
+
+.main-content {
+  flex-grow: 1;
+  width: calc(100% - 200px); /* full width minus sidebar */
+}
+
+
+/* ================= NAVBARS ================= */
+.navbar
+{
+  background-color: #3792ed;
+}
+.dropdown-menu-nav {
+  min-width: 180px; /* wider dropdowns */
+}
+.dropdown-menu {
+  width: fit-content;
+}
+
+.dropdown-menu.w-100px {
+  min-width: 150px !important;
+  width: 150px !important;
+}
+
+.custom-dropdown {
+  min-width: 150px;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.custom-dropdown .dropdown-item {
+  color: #000000;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #000000;
+}
+/* Hover open on desktop */
+@media (min-width:992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+/* ================= TABLES ================= */
+/* Sticky header */
+.sticky-header th {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 5;
+}
+.compact {
+  max-width: 150px;   /* adjust width */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* Tooltip effect */
+.with-tooltip {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: help;
+}
+
+/* ================= DASHBOARD CARDS ================= */
+.flex-grow-1 {
+  background: linear-gradient(135deg, #f9fafb 0%, #eef1f5 100%);
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.sticky-top {
+  background: white;
+  border-radius: 10px;
+}
+
+.card-body i {
+  max-width: 150px;
+  transition: transform 0.2s ease;
+}
+
+.card-body:hover i {
+  transform: scale(1.1);
+}
+
+/* ================= DROPDOWNS & BUTTONS ================= */
+/* ✅ Custom button style */
+
+/* Hover effect for entire li */
+.dropdown-menu li {
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f3f5; /* light gray highlight */
+  cursor: pointer;
+}
+
+/* Change text + icon color on hover */
+.dropdown-menu li:hover .dropdown-item,
+  .dropdown-menu li:hover i {
+  color: #0d6efd; /* Bootstrap primary blue */
+}
+
+/* ================= MODALS ================= */
+.custom-modal-header {
+  background-color: #007b9e;
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-modal-header .modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* Required field asterisk */
+.required {
+  color: red;
+  font-size: 0.9em;
+  vertical-align: super;
+}
+
+/* Form elements inside modal */
+.form-select,
+.form-control {
+  height: 38px;
+  font-size: 0.95rem;
+}
+
+.modal-footer .btn {
+  font-size: 0.9rem;
+}
+
+.g-3 > [class*="col-"] {
+  margin-bottom: 0.75rem;
+}
+
+/* Disabled blur effect */
+.blurred {
+  filter: blur(2px);
+  pointer-events: none;
+}
+.sticky-header thead th {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 5;
+}
